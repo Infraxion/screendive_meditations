@@ -1,0 +1,35 @@
+body {
+  background-color: #e8ecef;
+}
+
+.box {
+  aspect-ratio: 1/1;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10%;
+  box-shadow: inset 2.5vw 2.5vw 2.5vw 0 rgba(0, 0, 0, 0.1), inset -2.5vw -2.5vw 2.5vw 0 white;
+  background-color: #ecf0f3;
+}
+.box .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2vw;
+  font-family: "Open Sans", sans-serif;
+  color: #9a9b9b;
+}
+.box .text .link {
+  border-radius: 10%;
+  box-shadow: inset 2.5vw 2.5vw 2.5vw 0 rgba(0, 0, 0, 0.1), inset -2.5vw -2.5vw 2.5vw 0 white;
+}
+.box .text .link a {
+  text-decoration: none;
+  color: #9a9b9b;
+}
+
+/*# sourceMappingURL=styles_instructions.css.map */
