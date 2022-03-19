@@ -13,10 +13,41 @@
 </head>
 <body>
 <div class="main">
+    <audio id="loop_background" loop>
+        <source src="audio/LOOP%20ON%20PAGE%202_wav.wav" type="audio/wav">
+    </audio>
+    <audio id="loop_A" loop muted>
+        <source src="audio/A_NEUTRAL.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_CS" loop muted>
+        <source src="audio/C%23_STRONGLY%20DISAGREE.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_C" loop muted>
+        <source src="audio/C_AGREE.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_D" loop muted>
+        <source src="audio/D_STRONGLY%20DISAGREE.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_E" loop muted>
+        <source src="audio/E_STRONGLY%20DISAGREE.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_FS" loop muted>
+        <source src="audio/F%23_NEW%20STRONGLY%20AGREE.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_F" loop muted>
+        <source src="audio/F_STRONGLY%20AGREE.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_GS" loop muted>
+        <source src="audio/G%23_DISAGREE.mp3" type="audio/mp3">
+    </audio>
+    <audio id="loop_G" loop muted>
+        <source src="audio/G_DISAGREE.mp3" type="audio/mp3">
+    </audio>
+
     <p class="question">You are currently satisfied with your level of practical and affective input and output</p>
     <p class="options">
         <label for="q1r1" class="r1">Strongly Disagree<br>
-            <input type="radio" id="q1r1" name="q1" value="1">
+            <input type="radio" id="q1r1" name="q1" value="1" onclick="radio(1, 1);">
         </label>
         <label for="q1r2" class="r2">Disagree<br>
             <input type="radio" id="q1r2" name="q1" value="2">
@@ -203,5 +234,7 @@
         </label>
     </p>
 </div>
+
+<script src="script_questions.js"></script>
 </body>
 </html>
