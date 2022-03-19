@@ -1,3 +1,46 @@
+body {
+  background-color: #99b4bc;
+}
 
+.main {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10em;
+  margin-bottom: 10em;
+}
+.main .question {
+  font-size: 16pt;
+  font-family: "Open Sans", sans-serif;
+}
+.main .options {
+  margin-bottom: 5em;
+  font-size: 12pt;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-columns: auto 130px 130px 130px 130px 130px auto;
+  grid-template-rows: auto;
+  grid-template-areas: ". r1 r2 r3 r4 r5 .";
+}
+.main .options label {
+  margin-top: 0.5em;
+}
+.main .options input {
+  margin-top: 0.5em;
+}
+.main .options .r1 {
+  grid-area: r1;
+}
+.main .options .r2 {
+  grid-area: r2;
+}
+.main .options .r3 {
+  grid-area: r3;
+}
+.main .options .r4 {
+  grid-area: r4;
+}
+.main .options .r5 {
+  grid-area: r5;
+}
 
 /*# sourceMappingURL=styles_questions.css.map */
