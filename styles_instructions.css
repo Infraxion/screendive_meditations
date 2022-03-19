@@ -4,32 +4,52 @@ body {
 
 .box {
   aspect-ratio: 1/1;
-  width: 60%;
+  width: calc(min(100vw, 100vh) * 0.9);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10%;
-  box-shadow: inset 2.5vw 2.5vw 2.5vw 0 rgba(0, 0, 0, 0.1), inset -2.5vw -2.5vw 2.5vw 0 white;
+  border-radius: 16%;
+  box-shadow: inset calc(min(100vw, 100vh) * 0.025) calc(min(100vw, 100vh) * 0.025) calc(min(100vw, 100vh) * 0.025) 0 #d5d8e1, inset calc(min(100vw, 100vh) * -0.025) calc(min(100vw, 100vh) * -0.025) calc(min(100vw, 100vh) * 0.025) 0 #ffffff;
   background-color: #ecf0f3;
 }
 .box .text {
+  width: 86%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 2vw;
+  font-size: calc(min(100vw, 100vh) * 0.03);
   font-family: "Open Sans", sans-serif;
-  color: #9a9b9b;
+  color: #9e9f9f;
 }
-.box .text .link {
-  border-radius: 10%;
-  box-shadow: inset 2.5vw 2.5vw 2.5vw 0 rgba(0, 0, 0, 0.1), inset -2.5vw -2.5vw 2.5vw 0 white;
+.box .text p {
+  margin-bottom: calc(min(100vw, 100vh) * 0.06);
 }
-.box .text .link a {
+.box .text a {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: menulist-button;
+  width: 29%;
+  padding: calc(min(100vw, 100vh) * 0.015) calc(min(100vw, 100vh) * 0.025);
+  display: inline-block;
+  cursor: pointer;
   text-decoration: none;
-  color: #9a9b9b;
+  text-align: center;
+  font-size: calc(min(100vw, 100vh) * 0.025);
+  font-family: "Open Sans", sans-serif;
+  color: #9e9f9f;
+  border: none;
+  border-radius: calc(min(100vw, 100vh) * 10);
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(255, 255, 255, 0.5), inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(213, 216, 225, 0.5);
+  background-color: #edf0f3;
+}
+.box .text a:hover {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1;
+}
+.box .text a:active {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff;
 }
 
 /*# sourceMappingURL=styles_instructions.css.map */
