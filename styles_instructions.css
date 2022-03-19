@@ -38,6 +38,7 @@ body {
   text-decoration: none;
   text-align: center;
   font-size: calc(min(100vw, 100vh) * 0.025);
+  font-weight: bold;
   font-family: "Open Sans", sans-serif;
   color: #9e9f9f;
   border: none;

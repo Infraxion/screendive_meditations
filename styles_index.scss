@@ -1,11 +1,17 @@
-.body {
+$scaled-min: min(100vw, 100vh);
+$shadow-size: calc(#{$scaled-min} * 0.025);
+$shadow-size-inv: calc(#{$scaled-min} * -0.025);
+$shadow-size-small: calc(#{$scaled-min} * 0.008);
+$shadow-size-inv-small: calc(#{$scaled-min} * -0.008);
+
+body {
   background-color: #e8ecef;
 }
 
 .video {
   aspect-ratio: 16 / 9;
-  width: 90%;
-  margin: calc(100vw * 0.05) auto calc(100vw * 0.05) auto;
+  width: min(80vw, 80vh);
+  margin: calc(100vw * 0.1) auto calc(100vw * 0.05) auto;
 
   iframe {
     width: 100%;
@@ -18,14 +24,33 @@
   text-align: center;
 
   a {
-    color: #222222;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: menulist-button;
+
+    width: 29%;
+    padding: calc(#{$scaled-min} * 0.015) calc(#{$scaled-min} * 0.025);
+    display: inline-block;
+    cursor: pointer;
+
     text-decoration: none;
-    font-size: 48pt;
+    text-align: center;
+    font-size: calc(#{$scaled-min} * 0.025);
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+    color: #9e9f9f;
 
-    border-style: inset;
-    border-radius: 16pt;
-    border-width: 5pt;
+    border: none;
+    border-radius: calc(#{$scaled-min} * 10);
+    box-shadow: inset $shadow-size-small $shadow-size-small $shadow-size-small 0 rgba(255, 255, 255, 0.5), inset $shadow-size-inv-small $shadow-size-inv-small $shadow-size-small 0 rgba(213, 216, 225, 0.5);
 
-    padding: 24pt;
+    background-color: #edf0f3;
+
+    &:hover {
+      box-shadow: inset $shadow-size-small $shadow-size-small $shadow-size-small 0 #ffffff, inset $shadow-size-inv-small $shadow-size-inv-small $shadow-size-small 0 #d5d8e1;
+    }
+    &:active {
+      box-shadow: inset $shadow-size-small $shadow-size-small $shadow-size-small 0 #d5d8e1, inset $shadow-size-inv-small $shadow-size-inv-small $shadow-size-small 0 #ffffff;
+    }
   }
 }

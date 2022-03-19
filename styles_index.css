@@ -1,11 +1,11 @@
-.body {
+body {
   background-color: #e8ecef;
 }
 
 .video {
   aspect-ratio: 16/9;
-  width: 90%;
-  margin: 5vw auto 5vw auto;
+  width: min(80vw, 80vh);
+  margin: 10vw auto 5vw auto;
 }
 .video iframe {
   width: 100%;
@@ -17,13 +17,29 @@
   text-align: center;
 }
 .link a {
-  color: #222222;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: menulist-button;
+  width: 29%;
+  padding: calc(min(100vw, 100vh) * 0.015) calc(min(100vw, 100vh) * 0.025);
+  display: inline-block;
+  cursor: pointer;
   text-decoration: none;
-  font-size: 48pt;
-  border-style: inset;
-  border-radius: 16pt;
-  border-width: 5pt;
-  padding: 24pt;
+  text-align: center;
+  font-size: calc(min(100vw, 100vh) * 0.025);
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  color: #9e9f9f;
+  border: none;
+  border-radius: calc(min(100vw, 100vh) * 10);
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(255, 255, 255, 0.5), inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(213, 216, 225, 0.5);
+  background-color: #edf0f3;
+}
+.link a:hover {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1;
+}
+.link a:active {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff;
 }
 
 /*# sourceMappingURL=styles_index.css.map */
