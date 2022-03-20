@@ -1,0 +1,129 @@
+body {
+  background-color: #e8ecef;
+}
+
+.slide .box {
+  aspect-ratio: 1/1;
+  width: calc(min(100vw, 100vh) * 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16%;
+  box-shadow: inset calc(min(100vw, 100vh) * 0.025) calc(min(100vw, 100vh) * 0.025) calc(min(100vw, 100vh) * 0.025) 0 #d5d8e1, inset calc(min(100vw, 100vh) * -0.025) calc(min(100vw, 100vh) * -0.025) calc(min(100vw, 100vh) * 0.025) 0 #ffffff;
+  background-color: #ecf0f3;
+}
+.slide .box .text {
+  width: 86%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: calc(min(100vw, 100vh) * 0.03);
+  font-family: "Open Sans", sans-serif;
+  color: #9e9f9f;
+}
+.slide .box .text p {
+  margin-bottom: calc(min(100vw, 100vh) * 0.06);
+}
+.slide .box .text a {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: menulist-button;
+  width: 29%;
+  padding: calc(min(100vw, 100vh) * 0.015) calc(min(100vw, 100vh) * 0.025);
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: calc(min(100vw, 100vh) * 0.025);
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  color: #9e9f9f;
+  border: none;
+  border-radius: calc(min(100vw, 100vh) * 10);
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(255, 255, 255, 0.5), inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(213, 216, 225, 0.5);
+  background-color: #edf0f3;
+}
+.slide .box .text a:hover {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1;
+}
+.slide .box .text a:active {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff;
+}
+.slide .button_fancy {
+  padding: calc(min(100vw, 100vh) * 0.015) calc(min(100vw, 100vh) * 0.025);
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-size: calc(min(100vw, 100vh) * 0.025);
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  color: #9e9f9f;
+  border: none;
+  border-radius: calc(min(100vw, 100vh) * 10);
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(255, 255, 255, 0.5), inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 rgba(213, 216, 225, 0.5);
+  background-color: #edf0f3;
+}
+.slide .button_fancy:hover {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1;
+}
+.slide .button_fancy:active {
+  box-shadow: inset calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) calc(min(100vw, 100vh) * 0.008) 0 #d5d8e1, inset calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * -0.008) calc(min(100vw, 100vh) * 0.008) 0 #ffffff;
+}
+
+.video {
+  aspect-ratio: 16/9;
+  width: min(80vw, 80vh);
+  margin: 10vw auto 5vw auto;
+}
+.video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.quiz {
+  background-color: #99b4bc;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+.quiz .question {
+  font-size: 16pt;
+  font-family: "Open Sans", sans-serif;
+}
+.quiz .options {
+  margin-bottom: 5em;
+  font-size: 12pt;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-columns: auto 130px 130px 130px 130px 130px auto;
+  grid-template-rows: auto;
+  grid-template-areas: ". r1 r2 r3 r4 r5 .";
+}
+.quiz .options label {
+  margin-top: 0.5em;
+}
+.quiz .options input {
+  margin-top: 0.5em;
+}
+.quiz .options .r1 {
+  grid-area: r1;
+}
+.quiz .options .r2 {
+  grid-area: r2;
+}
+.quiz .options .r3 {
+  grid-area: r3;
+}
+.quiz .options .r4 {
+  grid-area: r4;
+}
+.quiz .options .r5 {
+  grid-area: r5;
+}
+
+/*# sourceMappingURL=styles.css.map */
