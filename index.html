@@ -24,21 +24,22 @@
     </div>
 </section>
 
-<section id="slideVideo">
+<section id="slideSplash">
     <div class="video_box">
-        <div class="video">
-            <iframe src="https://www.youtube-nocookie.com/embed/iLx2G2lHBDM"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
-        </div>
+        <audio loop id="audioSplash">
+            <source src="media/splash.ogg" type="audio/ogg">
+        </audio>
+        <video autoplay muted loop onclick="setSlide(2)">
+            <source src="media/splash.mp4" type="video/mp4">
+        </video>
         <a onclick="setSlide(2)" class="button_fancy">Instructions</a>
     </div>
 </section>
 
 <section id="slideInstructions">
+    <audio loop id="audioInstructions">
+        <source src="media/instructions.ogg" type="audio/ogg">
+    </audio>
     <div class="text_box">
         <div class="text">
             <p>Before the survey, take five slow-deep breaths</p>

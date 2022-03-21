@@ -15,6 +15,6 @@ const radio = function(q, r) {
     for (let j = 0; j < num_options; j++) {
         audio_matrix[q][j].muted = true;
     }
-    audio_matrix[q][r].volume = 0.1;
+    audio_matrix[q][r].volume = 0.25;
     audio_matrix[q][r].muted = false;
 }
