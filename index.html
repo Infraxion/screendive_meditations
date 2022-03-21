@@ -12,36 +12,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="slide" id="intro">
-    <div class="box">
+<section class="active" id="slideIntro">
+    <div class="text_box">
         <div class="text">
             <p><b>Instrumentalising (y)our Desire</b></p>
             <p>The aim of this exercise is to determine what you really desire in the work-place via an Effective Sonic Meditational Process (ESMP)</p>
             <p>By employing James Hazel's patented Survey-Score&reg; technology, we will help you resolve any hindrances to your work-energy-potential!</p>
             <p>There may also be an opportunity for you to join our resonating community for life :)</p>
-            <a onclick="nextSlide(1)" href="#video" class="button_fancy">Enter</a>
+            <a onclick="setSlide(1)" class="button_fancy">Enter</a>
         </div>
     </div>
-</div>
+</section>
 
-<div class="slide" id="video">
-    <div class="video">
-        <iframe width="560"
-                height="315"
-                src="https://www.youtube-nocookie.com/embed/iLx2G2lHBDM"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
+<section id="slideVideo">
+    <div class="video_box">
+        <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/iLx2G2lHBDM"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        <a onclick="setSlide(2)" class="button_fancy">Instructions</a>
     </div>
-    <div class="button_fancy">
-        <a href="instructions.html">Instructions</a>
-    </div>
-</div>
+</section>
 
-<div class="slide" id="instructions">
-    <div class="box">
+<section id="slideInstructions">
+    <div class="text_box">
         <div class="text">
             <p>Before the survey, take five slow-deep breaths</p>
             <p>(exhale with a deep ahh-yes)</p>
@@ -49,11 +47,11 @@
             <p>During the survey, indicate the level to which you agree or disagree with the written statements</p>
             <p>&</p>
             <p>The resultant soundscape will reveal if your profile is a good fit</p>
-            <a href="questions.html">Let's begin together</a>
+            <a href="questions.html" class="button_fancy">Let's begin together</a>
         </div>
     </div>
-</div>
+</section>
 
-<script src="script_main.js"></script>
+<script src="script_index.js"></script>
 </body>
 </html>

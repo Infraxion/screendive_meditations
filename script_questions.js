@@ -1,34 +1,20 @@
-const loop_background = document.getElementById("loop_background");
-const loop_A = document.getElementById("loop_A");
-const loop_CS = document.getElementById("loop_CS");
-const loop_C = document.getElementById("loop_C");
-const loop_D = document.getElementById("loop_D");
-const loop_E = document.getElementById("loop_E");
-const loop_FS = document.getElementById("loop_FS");
-const loop_F = document.getElementById("loop_F");
-const loop_GS = document.getElementById("loop_GS");
-const loop_G = document.getElementById("loop_G");
+const num_questions = 10;
+const num_options = 5;
 
-const input = function(e) {
-    if(e.type === 'touchstart' || e.type === 'mousedown') {
-        loop_background.play();
-        loop_A.play();
-        loop_CS.play();
-        loop_C.play();
-        loop_D.play();
-        loop_E.play();
-        loop_FS.play();
-        loop_F.play();
-        loop_GS.play();
-        loop_G.play();
+const audio_matrix = [];
+
+for (let i = 0; i < num_questions; i++) {
+    const temp_matrix = [];
+    for (let j = 0; j < num_options; j++) {
+        temp_matrix[j] = document.getElementById("q" + i + "r" + j + "a");
     }
+    audio_matrix[i] = temp_matrix;
 }
 
 const radio = function(q, r) {
-    if(q === 1 || r === 1) {
-        loop_D.muted = false;
+    for (let j = 0; j < num_options; j++) {
+        audio_matrix[q][j].muted = true;
     }
+    audio_matrix[q][r].volume = 0.1;
+    audio_matrix[q][r].muted = false;
 }
-
-document.addEventListener('touchstart', input, false);
-document.addEventListener('mousedown', input, false);
