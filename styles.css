@@ -87,7 +87,7 @@ body {
   display: grid;
   grid-template-columns: auto 130px 130px 130px 130px 130px auto;
   grid-template-rows: auto;
-  grid-template-areas: ". r1 r2 r3 r4 r5 .";
+  grid-template-areas: ". r0 r1 r2 r3 r4 .";
 }
 .quiz .options label {
   margin-top: 0.5em;
@@ -97,6 +97,9 @@ body {
 }
 .quiz .options audio {
   position: absolute;
+}
+.quiz .options .r0 {
+  grid-area: r0;
 }
 .quiz .options .r1 {
   grid-area: r1;
@@ -109,9 +112,6 @@ body {
 }
 .quiz .options .r4 {
   grid-area: r4;
-}
-.quiz .options .r5 {
-  grid-area: r5;
 }
 
 /*# sourceMappingURL=styles.css.map */

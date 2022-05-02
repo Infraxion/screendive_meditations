@@ -1,4 +1,4 @@
-const num_questions = 10;
+const num_questions = 11;
 const num_options = 5;
 
 const audio_matrix = [];

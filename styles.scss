@@ -116,7 +116,7 @@ body {
     grid-template-columns: auto 130px 130px 130px 130px 130px auto;
     grid-template-rows: auto;
     grid-template-areas:
-      ". r1 r2 r3 r4 r5 .";
+      ". r0 r1 r2 r3 r4 .";
 
     label {
       margin-top: 0.5em;
@@ -130,6 +130,9 @@ body {
       position: absolute;
     }
 
+    .r0 {
+      grid-area: r0;
+    }
     .r1 {
       grid-area: r1;
     }
@@ -141,9 +144,6 @@ body {
     }
     .r4 {
       grid-area: r4;
-    }
-    .r5 {
-      grid-area: r5;
     }
   }
 }
