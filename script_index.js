@@ -4,6 +4,7 @@ slideList.push(document.getElementById("slideSplash"));
 slideList.push(document.getElementById("slideInstructions"));
 const audioSplash = document.getElementById("audioSplash");
 const audioInstructions = document.getElementById("audioInstructions");
+const audioInstructionsVO = document.getElementById("audioInstructionsVO");
 
 hideSlides();
 updateSlide();
@@ -32,7 +33,9 @@ function updateSlide() {
 
         resetAudio()
         audioInstructions.play();
-        audioInstructions.volume = 0.25;
+        audioInstructions.volume = 0.20;
+        audioInstructionsVO.play();
+        audioInstructionsVO.volume = 0.5;
     }
 }
 
@@ -41,6 +44,8 @@ function resetAudio() {
     audioSplash.currentTime = 0;
     audioInstructions.pause();
     audioInstructions.currentTime = 0;
+    audioInstructionsVO.pause();
+    audioInstructionsVO.currentTime = 0;
 }
 
 function setSlide(slide) {
