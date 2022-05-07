@@ -114,6 +114,8 @@ function updateSlide() {
     }
     if (window.location.hash === "#results") {
         slideList[5].style.display = "block";
+        resetQuestionAudio();
+        recordedAudio.pause();
 
         audioResults.currentTime = 0;
         audioResults.play();
@@ -244,7 +246,7 @@ function hum() {
 
                 setTimeout(() => {
                     setSlide(5);
-                }, 7000)
+                }, 12000)
             }, 10000);
         });
 }
