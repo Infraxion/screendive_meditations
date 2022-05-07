@@ -58,28 +58,43 @@ function updateSlide() {
         slideList[1].style.display = "block";
         resetQuestionAudio();
 
-        setTimeout(function() {
-            audioSplash.play();
-            audioSplash.currentTime = 0;
-            fadeIn(audioSplash, 0.25);
+        audioSplash.play();
+        audioSplash.currentTime = 0;
+        fadeIn(audioSplash, 0.25);
 
-            videoSplash.currentTime = 0;
-            videoSplash.play();
-        }, wait_time);
+        videoSplash.currentTime = 0;
+        videoSplash.play();
+
+        // setTimeout(function() {
+        //     audioSplash.play();
+        //     audioSplash.currentTime = 0;
+        //     fadeIn(audioSplash, 0.25);
+        //
+        //     videoSplash.currentTime = 0;
+        //     videoSplash.play();
+        // }, wait_time);
     }
     if (window.location.hash === "#instructions") {
         slideList[2].style.display = "block";
         resetQuestionAudio();
 
-        setTimeout(function() {
-            audioInstructions.currentTime = 0;
-            audioInstructions.play();
-            fadeIn(audioInstructions, 0.20);
+        audioInstructions.currentTime = 0;
+        audioInstructions.play();
+        fadeIn(audioInstructions, 0.20);
 
-            audioInstructionsVO.currentTime = 0;
-            audioInstructionsVO.play();
-            fadeIn(audioInstructionsVO, 0.5);
-        }, wait_time);
+        audioInstructionsVO.currentTime = 0;
+        audioInstructionsVO.play();
+        fadeIn(audioInstructionsVO, 0.5);
+
+        // setTimeout(function() {
+        //     audioInstructions.currentTime = 0;
+        //     audioInstructions.play();
+        //     fadeIn(audioInstructions, 0.20);
+        //
+        //     audioInstructionsVO.currentTime = 0;
+        //     audioInstructionsVO.play();
+        //     fadeIn(audioInstructionsVO, 0.5);
+        // }, wait_time);
     }
     if (window.location.hash === "#questions") {
         slideList[3].style.display = "block";
@@ -91,21 +106,29 @@ function updateSlide() {
     if (window.location.hash === "#results") {
         slideList[5].style.display = "block";
 
-        setTimeout(function() {
-            audioResults.currentTime = 0;
-            audioResults.play();
-            fadeIn(audioResults, 0.25);
-        }, wait_time);
+        audioResults.currentTime = 0;
+        audioResults.play();
+        fadeIn(audioResults, 0.25);
+
+        // setTimeout(function() {
+        //     audioResults.currentTime = 0;
+        //     audioResults.play();
+        //     fadeIn(audioResults, 0.25);
+        // }, wait_time);
     }
     if (window.location.hash === "#final") {
         slideList[6].style.display = "block";
         resetQuestionAudio();
 
-        setTimeout(function() {
-            videoFinal.currentTime = 0;
-            videoFinal.play();
-            fadeIn(videoFinal, 1);
-        }, wait_time);
+        videoFinal.currentTime = 0;
+        videoFinal.play();
+        fadeIn(videoFinal, 1);
+
+        // setTimeout(function() {
+        //     videoFinal.currentTime = 0;
+        //     videoFinal.play();
+        //     fadeIn(videoFinal, 1);
+        // }, wait_time);
     }
 }
 
@@ -211,24 +234,26 @@ function hum() {
 // media fade tools
 function fadeIn(media, target) {
     media.muted = false;
-    let fadeInterval = setInterval(function() {
-        if(media.volume < target - fade_step){
-            media.volume += fade_step;
-        } else {
-            clearInterval(fadeInterval);
-            media.volume = target;
-        }
-    }, fade_interval);
+    media.volume = target;
+    // let fadeInterval = setInterval(function() {
+    //     if(media.volume < target - fade_step){
+    //         media.volume += fade_step;
+    //     } else {
+    //         clearInterval(fadeInterval);
+    //         media.volume = target;
+    //     }
+    // }, fade_interval);
 }
 
 function fadeOut(media) {
-    let fadeInterval = setInterval(function() {
-        if(media.volume > fade_step){
-            media.volume -= fade_step;
-        } else {
-            clearInterval(fadeInterval);
-            media.muted = true;
-            media.volume = 0;
-        }
-    }, fade_interval);
+    media.volume = 0;
+    // let fadeInterval = setInterval(function() {
+    //     if(media.volume > fade_step){
+    //         media.volume -= fade_step;
+    //     } else {
+    //         clearInterval(fadeInterval);
+    //         media.muted = true;
+    //         media.volume = 0;
+    //     }
+    // }, fade_interval);
 }
