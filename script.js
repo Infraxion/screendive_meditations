@@ -14,6 +14,10 @@ const audioResults = document.getElementById("audioResults");
 const videoLoading = document.getElementById("videoLoading");
 const videoFinal = document.getElementById("videoFinal");
 
+const hideA = document.getElementById("hideA");
+const hideB = document.getElementById("hideB");
+const hideC = document.getElementById("hideC");
+
 let recordedAudio = new Audio();
 
 const num_questions = 11;
@@ -53,10 +57,12 @@ function updateSlide() {
     if (window.location.hash === "#intro" || window.location.hash === "") {
         slideList[0].style.display = "block";
         resetQuestionAudio();
+        recordedAudio.pause();
     }
     if (window.location.hash === "#splash") {
         slideList[1].style.display = "block";
         resetQuestionAudio();
+        recordedAudio.pause();
 
         audioSplash.play();
         audioSplash.currentTime = 0;
@@ -77,6 +83,7 @@ function updateSlide() {
     if (window.location.hash === "#instructions") {
         slideList[2].style.display = "block";
         resetQuestionAudio();
+        recordedAudio.pause();
 
         audioInstructions.currentTime = 0;
         audioInstructions.play();
@@ -99,9 +106,11 @@ function updateSlide() {
     if (window.location.hash === "#questions") {
         slideList[3].style.display = "block";
         resetQuestionAudio();
+        recordedAudio.pause();
     }
     if (window.location.hash === "#hum") {
         slideList[4].style.display = "block";
+        recordedAudio.pause();
     }
     if (window.location.hash === "#results") {
         slideList[5].style.display = "block";
@@ -119,6 +128,7 @@ function updateSlide() {
     if (window.location.hash === "#final") {
         slideList[6].style.display = "block";
         resetQuestionAudio();
+        recordedAudio.pause();
 
         videoFinal.currentTime = 0;
         videoFinal.play();
@@ -163,6 +173,9 @@ function hideSlides() {
         slideList[i].style.display = "none";
     }
     videoLoading.style.opacity = "0";
+    hideA.style.opacity = "1";
+    hideB.style.opacity = "1";
+    hideC.style.opacity = "1";
     humming = false;
 }
 
@@ -175,7 +188,6 @@ function resetMedia() {
     fadeOut(audioInstructionsVO);
     fadeOut(audioResults);
     fadeOut(videoFinal);
-    recordedAudio.pause();
 }
 
 // fade out all question audio
@@ -225,8 +237,14 @@ function hum() {
             });
 
             setTimeout(() => {
+                hideA.style.opacity = "0";
+                hideB.style.opacity = "0";
+                hideC.style.opacity = "0";
                 mediaRecorder.stop();
-                setSlide(5);
+
+                setTimeout(() => {
+                    setSlide(5);
+                }, 7000)
             }, 10000);
         });
 }
