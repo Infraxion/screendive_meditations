@@ -208,6 +208,7 @@ function radio(q, r) {
     }
 
     setTimeout(function() {
+        audio_matrix[q][r].play();
         fadeIn(audio_matrix[q][r], 0.25);
     }, wait_time);
 }
